@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Body Builders</title>
+    <script src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body onload="carregarClientes(); carregarAcademias()">
+    <header>
+        <h1>Body Builders</h1>
+        <button class="button" onclick="adicionar()">Adicionar</button>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Academia</th>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Estilo</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Data de Nascimento</th>
+                <th>Sapato</th>
+                <th>Ações</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <div id="modal">
+        <button onclick="ocultarModal()">fechar</button>
+        <form onsubmit="return salvar()">
+            <div class="form-group">
+                <label>CPF</label>
+                <input type="text" name="cpf" id="cpf" />
+            </div>
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome" />
+            </div>
+
+            <div class="form-group">
+                <label>Estilo</label>
+                <select id="estilo">
+                    <option value="1">frangão</option>
+                    <option value="2">masomenos</option>
+                    <option value="3">fortinho</option>
+                    <option value="4">ogro</option>
+                </select>
+            </div>
+           
+
+            <div class="form-group">
+                <label>Peso</label>
+                <input type="number" name="peso" id="peso" />
+            </div>
+            <div class="form-group">
+                <label>Altura</label>
+                <input type="text" name="altura" id="altura" />
+            </div>
+            <div class="form-group">
+                <label>Data de Nascimento</label>
+                <input type="date" name="dataNascimento" id="dataNascimento" />
+            </div>
+            <div class="form-group">
+                <label>Tamanho do Sapato</label>
+                <input type="number" name="sapato" id="sapato" />
+            </div>
+            <div class="form-group">
+                <label>Academia</label>
+                <select id="academia">
+                    <option value="1"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="enviar" value="Salvar" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
